@@ -35,11 +35,10 @@ describe('Todoist - Register', function() {
     /* Prueba exitosa */
 
     it('Register successful', function() {
-
         cy.visit('https://todoist.com/Users/showRegister?success_page=');
         cy.contains('Signup').click()        
-        cy.get('#sign_up_form').find('input[id="full_name"]').click().type("Nathalia")
-        cy.get('#sign_up_form').find('input[id="email"]').click().type("test_exitosa2@example.com")
+        cy.get('#sign_up_form').find('input[id="full_name"]').click().type("Johan")
+        cy.get('#sign_up_form').find('input[id="email"]').click().type("test2@test.com")
         cy.get('#sign_up_form').find('input[type="password"]').click().type("12345678")
         cy.get('#sign_up_form').find('input[type="checkbox"]').check()
         cy.get('#sign_up_form').find('#submit_button').click();
